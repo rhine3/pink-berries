@@ -1,4 +1,4 @@
-**Introduction **
+**Introduction**
 
 This is the setup that we used to create the CeruleanTools AMI.
 
