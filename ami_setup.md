@@ -4,6 +4,8 @@ This is the setup that Lizzy Wilbanks and I used to create the CeruleanTools AMI
 
 Wishlist for future versions:
 * Clean up installation locations so that home directory isn't cluttered
+* Need to add PBsuite install & test instructions
+* Need to add .bashrc and jupyter config instructions
 
 ### Starting up your EC2 instance
 
