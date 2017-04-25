@@ -67,11 +67,11 @@ password
 Use your favorite text editor to add your password to the jupyter notebook config file. 
 Then, move that file to whereever it ought to be. :P
 
-### Installing dependencies
+### Installing bioinformatics programs
 
-Now we're really ready to rock and roll... at installing the dependencies of Cerulean. These are specified on the Cerulean Sourceforge site (https://sourceforge.net/projects/ceruleanassembler/files/?source=navbar). 
+Now we just need to install Cerulean and its dependencies. Its dependencies are specified on the Cerulean Sourceforge site (https://sourceforge.net/projects/ceruleanassembler/files/?source=navbar). Some dependencies listed on the site, like the Python libraries _numpy_ and _matplotlib_, should already be installed on the instance.
 
-Since the dependency installations require some interactivity, they can't be run from this notebook. Instead, make sure you're in your home folder and run the following commands line-by-line, pressing y when prompted. (Some dependencies listed on the site, like the Python libraries _numpy_ and _matplotlib_, should already be installed on the instance.)
+Run the following commands line-by-line, pressing y when prompted.
 
 * PBJelly: https://sourceforge.net/projects/pb-jelly/ 
 
