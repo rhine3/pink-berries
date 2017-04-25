@@ -1,19 +1,18 @@
 **Introduction**
 
-This is the setup that we used to create the CeruleanTools AMI.
+This is the setup that we used to create the CeruleanTools AMI. It may be incomplete. Compare with Lizzy's notes here: https://github.com/ewilbanks/micdiv2017/blob/master/research-proj/README.md if the tutorial doesn't seem to be working.
 
 Wishlist for future versions:
 * Clean up installation locations so that home directory isn't cluttered
 
-This may be an incomplete tutorial. Compare with Lizzy's notes here: https://github.com/ewilbanks/micdiv2017/blob/master/research-proj/README.md if the tutorial doesn't seem to be working.
 
 **Starting up EC2 Instance**
 
-First, start an Amazon Web Services instance (m3.2xlarge) on the SMRT community AMI provided by PacBio. We need the SMRT tools because we need to use BLASR, but installing BLASR on its own is pretty hard. We need two security rules when running these two things: 8888, for JuPyter notebooks, and 8080, for running the SMRT portal.
+First, start an Amazon Web Services instance (m3.2xlarge) on the SMRT community AMI provided by PacBio. We need the SMRT tools because we need to use BLASR, but installing BLASR on its own is a pain in the neck. We need two security rules when running these two things: 8888, for Jupyter notebooks, and 8080, for running the SMRT portal.
 
 **Upgrading the System**
 
-Unfortunately, the PacBio AMI is running on the Lucid version of Linux. We need it to run on Precise, a more updated version. We'll have to update the whole shabang. Run the following line-by-line:
+Unfortunately, the PacBio AMI runs on the Lucid version of Linux (release 12). We need it to run on Precise (release 16), a more updated version. We'll have to update the whole shabang, taking it from 12 to 14 and from 14 to 16. Run the following line-by-line:
  
 ```
 sudo apt-get update
@@ -28,3 +27,41 @@ sudo apt-get install default-jre
 
 Now, run ```lsb_release -a``` to see what release you're running on. It should be Precise.
 
+
+**Installing Github**
+
+This will install Github and get you the necessary file (the configuration file for jupyter to work)
+
+```
+sudo apt-get install git
+git clone https://github.com/rhine3/MicDivProject.git
+```
+
+**Getting Jupyter Running**
+
+Next, install Anaconda using the following commands.  Type "yes" when prompted.
+
+```
+wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
+bash Anaconda3-4.3.1-Linux-x86_64.sh
+```
+
+To make a secure connection between our notebook, we'll have to set up a password and a key/certification.
+
+* Generate key and certification:
+```
+cd /home/ubuntu/.jupyter
+openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem
+```
+
+* Generate password:
+```
+#Note: if you run this command in an unsecured Jupyter notebook, 
+#      YOUR PASSWORD WILL NOT BE SECURE
+
+from IPython.lib import passwd
+password = passwd("your_pass_here")
+password
+```
+
+Now add your password to that file.
