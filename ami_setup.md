@@ -64,4 +64,5 @@ password = passwd("your_pass_here")
 password
 ```
 
-Now add your password to that file.
+Use your favorite text editor to add your password to the jupyter notebook config file. 
+Then, move that file to whereever it ought to be. :P
