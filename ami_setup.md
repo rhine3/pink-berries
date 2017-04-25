@@ -1,4 +1,4 @@
-This tutorial is a bit funny, because it includes the installation of Jupyter Notebook while being written in a Jupyter notebook. Oh well. :)
+#Introduction 
 
 It may also be an incomplete tutorial. Compare with Lizzy's notes here: https://github.com/ewilbanks/micdiv2017/blob/master/research-proj/README.md if the tutorial doesn't seem to be working.
 
