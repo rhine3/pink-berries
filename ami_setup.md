@@ -26,7 +26,7 @@ sudo apt-get install default-jre
 
 Now, run ```lsb_release -a``` to see what release you're running on. It should be Precise.
 
-# Installing prerequisite programs 
+### Installing prerequisite programs 
 
 **Installing Github**
 
