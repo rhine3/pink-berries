@@ -7,6 +7,8 @@ Wishlist for future versions:
 * Need to add PBsuite install & test instructions
 * Need to add .bashrc and jupyter config instructions
 
+
+
 ## Starting up your EC2 instance
 
 First, start an Amazon Web Services instance (m3.2xlarge) on the SMRT community AMI provided by PacBio. We need the SMRT tools because we need to use BLASR, but installing BLASR on its own is a pain in the neck. We need two security rules when running these two things: 8888, for Jupyter notebooks, and 8080, for running the SMRT portal.
@@ -27,6 +29,8 @@ sudo apt-get install default-jre
 ```
 
 Now, run ```lsb_release -a``` to see what release you're running on. It should be Precise.
+
+
 
 ## Installing prerequisite programs 
 
@@ -73,6 +77,8 @@ Please check out: http://continuum.io/thanks and https://anaconda.org
 Use your favorite text editor to add your password to the Jupyter notebook config file. 
 Then, move that file to whereever it ought to be. :P
 
+
+
 ## Installing bioinformatics programs
 
 Now we just need to install Cerulean and its dependencies. Its dependencies are specified on the Cerulean Sourceforge site (https://sourceforge.net/projects/ceruleanassembler/files/?source=navbar). Some dependencies listed on the site, like the Python libraries _numpy_ and _matplotlib_, should already be installed on the instance.
@@ -109,6 +115,7 @@ Now that the dependencies are installed, download the Cerulean tarball itself an
 !tar -xvf Cerulean_v_0_1.tar.gz
 !rm Cerulean_v_0_1.tar.gz
 ```
+
 
 
 ## Getting dependencies working properly
