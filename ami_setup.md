@@ -60,7 +60,7 @@ cd /home/ubuntu/.jupyter
 openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem
 ```
 
-Generate password:
+Generate password, e.g.
 ```
 $ python
 Python 2.7.13 |Anaconda 4.3.1 (64-bit)| (default, Dec 20 2016, 23:09:15)
@@ -72,6 +72,7 @@ Please check out: http://continuum.io/thanks and https://anaconda.org
 >>> password = passwd("ENTER_WHAT_PASSWORD_YOU_WANT_HERE")
 >>> password
 'sha1:94147fbca785:73bbcab9be11bd87cc8acbb17d15c32f340018b7'
+>>> quit ()
 ```
 
 Use your favorite text editor to add your password to the Jupyter notebook config file. 
@@ -122,7 +123,7 @@ Now that the dependencies are installed, download the Cerulean tarball itself an
 
 **Editing the .bashrc file**
 
-One thing you'll need is the PYTHONPATH environmental variable. Get the appropriate python libraries by running the following:
+One thing you'll need is the PYTHONPATH environmental variable. Get the appropriate python libraries by running the following, e.g.:
 
 ```
 $ python
