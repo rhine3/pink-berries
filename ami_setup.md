@@ -4,8 +4,10 @@ This is the setup that Lizzy Wilbanks and I used to create the CeruleanTools AMI
 
 Wishlist for future versions:
 * Clean up installation locations so that home directory isn't cluttered
-* Need to add PBsuite install & test instructions
-* Need to add .bashrc and jupyter config instructions
+* Ensure PBsuite install & test instructions are complete
+* Ensure .bashrc and jupyter 
+
+instructions are complete
 
 
 
@@ -36,12 +38,13 @@ Now, run ```lsb_release -a``` to see what release you're running on. It should b
 
 **Installing Github**
 
-This will install Github and get you the necessary file (the configuration file for jupyter to work)
+These lines will install Github and get you the necessary file (the configuration file for jupyter to work)
 
 ```
 sudo apt-get install git
 git clone https://github.com/rhine3/MicDivProject.git
 ```
+
 
 **Installing and setting up Jupyter**
 
@@ -52,7 +55,7 @@ wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
 bash Anaconda3-4.3.1-Linux-x86_64.sh
 ```
 
-To make a secure connection between our notebook, we'll have to set up a password and a key/certification.
+Replace the contents of `~/.jupyter/jupyter_notebook_config.py` with the config file in the Git Repo. We'll also edit this file a bit more: to make a secure connection between our notebook, we'll have to set up a password and a key/certification.
 
 Generate key and certification:
 ```
@@ -75,8 +78,7 @@ Please check out: http://continuum.io/thanks and https://anaconda.org
 >>> quit ()
 ```
 
-Use your favorite text editor to add your password to the Jupyter notebook config file. 
-Then, move that file to whereever it ought to be. :P
+Add that password to the config file.
 
 
 
