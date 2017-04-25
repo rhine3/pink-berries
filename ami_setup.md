@@ -84,6 +84,14 @@ Quite easy. Just follow the prompts:
 sudo apt-get install abyss
 ```
 
+**Install PBSuite**
+NOTE: This last line MUST be run on Python 2.7, not Python 3. But I don't know what it does...
+```
+wget https://downloads.sourceforge.net/project/pb-jelly/PBSuite_15.8.24.tgz
+tar -xvzf PBSuite_15.8.24.tgz
+conda install -c anaconda networkx
+```
+
 **Installing Cerulean**
 
 Now that the dependencies are installed, download the Cerulean tarball itself and extract the files, then delete the tarball. The flags used for tar decompression below are:
@@ -97,3 +105,43 @@ Now that the dependencies are installed, download the Cerulean tarball itself an
 !tar -xvf Cerulean_v_0_1.tar.gz
 !rm Cerulean_v_0_1.tar.gz
 ```
+
+## Getting dependencies working properly
+
+**Editing the .bashrc file**
+
+One thing you'll need is the PYTHONPATH environmental variable. Get the appropriate python libraries by running the following:
+
+```
+$ python
+Python 2.7.13 |Anaconda 4.3.1 (64-bit)| (default, Dec 20 2016, 23:09:15)
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+Anaconda is brought to you by Continuum Analytics.
+Please check out: http://continuum.io/thanks and https://anaconda.org
+>>> import sys
+>>> print sys.path
+['', '/home/ubuntu/PBSuite_15.8.24', '/home/ubuntu/anaconda3/lib/python27.zip', '/home/ubuntu/anaconda3/lib/python2.7', '/home/ubuntu/anaconda3/lib/python2.7/plat-linux2', '/home/ubuntu/anaconda3/lib/python2.7/lib-tk', '/home/ubuntu/anaconda3/lib/python2.7/lib-old', '/home/ubuntu/anaconda3/lib/python2.7/lib-dynload', '/home/ubuntu/anaconda3/lib/python2.7/site-packages', '/home/ubuntu/anaconda3/lib/python2.7/site-packages/Sphinx-1.5.4-py2.7.egg', '/home/ubuntu/anaconda3/lib/python2.7/site-packages/setuptools-27.2.0-py2.7.egg', '/home/ubuntu/anaconda2/lib/python27.zip', '/home/ubuntu/anaconda2/lib/python2.7', '/home/ubuntu/anaconda2/lib/python2.7/plat-linux2', '/home/ubuntu/anaconda2/lib/python2.7/lib-tk', '/home/ubuntu/anaconda2/lib/python2.7/lib-old', '/home/ubuntu/anaconda2/lib/python2.7/lib-dynload', '/home/ubuntu/.local/lib/python2.7/site-packages', '/home/ubuntu/anaconda2/lib/python2.7/site-packages', '/home/ubuntu/anaconda2/lib/python2.7/site-packages/Sphinx-1.5.1-py2.7.egg', '/home/ubuntu/anaconda2/lib/python2.7/site-packages/setuptools-27.2.0-py2.7.egg']
+>>> quit()
+
+```
+After `print sys.path` you'll get that array of files. Yours may look different. Edit it so that it has colons between the entries, like so:
+
+```
+/home/ubuntu/PBSuite_15.8.24:/home/ubuntu/anaconda3/lib/python27.zip:/home/ubuntu/anaconda3/lib/python2.7:/home/ubuntu/anaconda3/lib/python2.7/plat-linux2:/home/ubuntu/anaconda3/lib/python2.7/lib-tk:/home/ubuntu/anaconda3/lib/python2.7/lib-old:/home/ubuntu/anaconda3/lib/python2.7/lib-dynload
+```
+
+
+Add the following lines to your `~/.bashrc` file, using the text above.
+```
+#adding smrt analysis executables to path
+export PATH="/opt/smrtanalysis/current/analysis/bin/:$PATH"
+
+### pythonpath environmental variable
+export PYTHONPATH="...OUTPUT FROM print sys.path GOES HERE"
+
+# adding pbsuite executables to path
+export PATH="$PATH:/home/ubuntu/PBSuite_15.8.24/bin"
+export SWEETPATH=/home/ubuntu/PBSuite_15.8.24
+```
+
