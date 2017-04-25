@@ -66,3 +66,32 @@ password
 
 Use your favorite text editor to add your password to the jupyter notebook config file. 
 Then, move that file to whereever it ought to be. :P
+
+**Installing Dependencies**
+
+Now we're really ready to rock and roll... at installing the dependencies of Cerulean. These are specified on the Cerulean Sourceforge site (https://sourceforge.net/projects/ceruleanassembler/files/?source=navbar). 
+
+Since the dependency installations require some interactivity, they can't be run from this notebook. Instead, make sure you're in your home folder and run the following commands line-by-line, pressing y when prompted. (Some dependencies listed on the site, like the Python libraries _numpy_ and _matplotlib_, should already be installed on the instance.)
+
+* PBJelly: https://sourceforge.net/projects/pb-jelly/ 
+
+**Installing ABySS** 
+
+Quite easy. Just follow the prompts:
+``` 
+sudo apt-get install abyss
+```
+
+**Installing Cerulean**
+
+Now that the dependencies are installed, download the Cerulean tarball itself and extract the files, then delete the tarball. The flags used for tar decompression below are:
+
+* x - e[x]tract files (not compress)
+* v - [v]erbose (tells you what files are being extracted)
+* f - [f]ile (tells you that the tarball filename is about to follow)
+
+```
+!wget "https://downloads.sourceforge.net/project/ceruleanassembler/Cerulean_v_0_1.tar.gz"
+!tar -xvf Cerulean_v_0_1.tar.gz
+!rm Cerulean_v_0_1.tar.gz
+```
