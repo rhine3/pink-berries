@@ -50,23 +50,27 @@ bash Anaconda3-4.3.1-Linux-x86_64.sh
 
 To make a secure connection between our notebook, we'll have to set up a password and a key/certification.
 
-* Generate key and certification:
+Generate key and certification:
 ```
 cd /home/ubuntu/.jupyter
 openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mykey.key -out mycert.pem
 ```
 
-* Generate password:
+Generate password:
 ```
-#Note: if you run this command in an unsecured Jupyter notebook, 
-#      YOUR PASSWORD WILL NOT BE SECURE
-
-from IPython.lib import passwd
-password = passwd("your_pass_here")
-password
+$ python
+Python 2.7.13 |Anaconda 4.3.1 (64-bit)| (default, Dec 20 2016, 23:09:15)
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-1)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+Anaconda is brought to you by Continuum Analytics.
+Please check out: http://continuum.io/thanks and https://anaconda.org
+>>> from IPython.lib import passwd
+>>> password = passwd("ENTER_WHAT_PASSWORD_YOU_WANT_HERE")
+>>> password
+'sha1:94147fbca785:73bbcab9be11bd87cc8acbb17d15c32f340018b7'
 ```
 
-Use your favorite text editor to add your password to the jupyter notebook config file. 
+Use your favorite text editor to add your password to the Jupyter notebook config file. 
 Then, move that file to whereever it ought to be. :P
 
 ## Installing bioinformatics programs
