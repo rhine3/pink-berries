@@ -158,3 +158,5 @@ export PATH="$PATH:/home/ubuntu/PBSuite_15.8.24/bin"
 export SWEETPATH=/home/ubuntu/PBSuite_15.8.24
 ```
 
+## Adding the DATA
+``` snap-05d8a017523a3155d```
