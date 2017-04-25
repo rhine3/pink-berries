@@ -1,16 +1,15 @@
-**Introduction**
+# CeruleanTools AMI Setup
 
-This is the setup that we used to create the CeruleanTools AMI. It may be incomplete. Compare with Lizzy's notes here: https://github.com/ewilbanks/micdiv2017/blob/master/research-proj/README.md if the tutorial doesn't seem to be working.
+This is the setup that Lizzy Wilbanks and I used to create the CeruleanTools AMI. It may be incomplete. Compare with Lizzy's notes here: https://github.com/ewilbanks/micdiv2017/blob/master/research-proj/README.md if the tutorial doesn't seem to be working.
 
 Wishlist for future versions:
 * Clean up installation locations so that home directory isn't cluttered
 
-
-**Starting up EC2 Instance**
+### Starting up your EC2 instance
 
 First, start an Amazon Web Services instance (m3.2xlarge) on the SMRT community AMI provided by PacBio. We need the SMRT tools because we need to use BLASR, but installing BLASR on its own is a pain in the neck. We need two security rules when running these two things: 8888, for Jupyter notebooks, and 8080, for running the SMRT portal.
 
-**Upgrading the System**
+**Upgrading the system**
 
 Unfortunately, the PacBio AMI runs on the Lucid version of Linux (release 12). We need it to run on Precise (release 16), a more updated version. We'll have to update the whole shabang, taking it from 12 to 14 and from 14 to 16. Run the following line-by-line:
  
@@ -27,6 +26,7 @@ sudo apt-get install default-jre
 
 Now, run ```lsb_release -a``` to see what release you're running on. It should be Precise.
 
+# Installing prerequisite programs 
 
 **Installing Github**
 
@@ -37,9 +37,9 @@ sudo apt-get install git
 git clone https://github.com/rhine3/MicDivProject.git
 ```
 
-**Getting Jupyter Running**
+**Installing and setting up Jupyter**
 
-Next, install Anaconda using the following commands.  Type "yes" when prompted.
+Jupyter notebook is a common way of creating bioinformatics pipelines. It is included in the Anaconda package. Install Anaconda using the following commands, typing "yes" when prompted.
 
 ```
 wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
@@ -67,7 +67,7 @@ password
 Use your favorite text editor to add your password to the jupyter notebook config file. 
 Then, move that file to whereever it ought to be. :P
 
-**Installing Dependencies**
+### Installing dependencies
 
 Now we're really ready to rock and roll... at installing the dependencies of Cerulean. These are specified on the Cerulean Sourceforge site (https://sourceforge.net/projects/ceruleanassembler/files/?source=navbar). 
 
