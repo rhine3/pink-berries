@@ -1,5 +1,15 @@
 # Configuration file for jupyter-notebook.
 
+
+## The IP address the notebook server will listen on.
+c.NotebookApp.ip = '*'
+
+#  The string should be of the form type:salt:hashed-password.
+c.NotebookApp.password = 'sha1:06ce83a4b754:9df093a0498353b2c0950ca7ff0eff0f5839e541'
+
+## The port the notebook server will listen on.
+c.NotebookApp.port = 8888
+
 #------------------------------------------------------------------------------
 # Application(SingletonConfigurable) configuration
 #------------------------------------------------------------------------------
@@ -154,9 +164,6 @@
 #  limited.
 #c.NotebookApp.iopub_msg_rate_limit = 0
 
-## The IP address the notebook server will listen on.
-c.NotebookApp.ip = '*'
-
 ## Supply extra arguments that will be passed to Jinja environment.
 #c.NotebookApp.jinja_environment_options = {}
 
@@ -206,12 +213,6 @@ c.NotebookApp.ip = '*'
 #  
 #    from notebook.auth import passwd; passwd()
 #  
-
-#  The string should be of the form type:salt:hashed-password.
-c.NotebookApp.password = 'sha1:06ce83a4b754:9df093a0498353b2c0950ca7ff0eff0f5839e541'
-
-## The port the notebook server will listen on.
-c.NotebookApp.port = 8888
 
 ## The number of additional ports to try if the specified port is not available.
 #c.NotebookApp.port_retries = 50
