@@ -1,6 +1,11 @@
-#Introduction 
+**Introduction **
 
-It may also be an incomplete tutorial. Compare with Lizzy's notes here: https://github.com/ewilbanks/micdiv2017/blob/master/research-proj/README.md if the tutorial doesn't seem to be working.
+This is the setup that we used to create the CeruleanTools AMI.
+
+Wishlist for future versions:
+* Clean up installation locations so that home directory isn't cluttered
+
+This may be an incomplete tutorial. Compare with Lizzy's notes here: https://github.com/ewilbanks/micdiv2017/blob/master/research-proj/README.md if the tutorial doesn't seem to be working.
 
 **Starting up EC2 Instance**
 
