@@ -5,9 +5,7 @@ This is the setup that Lizzy Wilbanks and I used to create the CeruleanTools AMI
 Wishlist for future versions:
 * Clean up installation locations so that home directory isn't cluttered
 * Ensure PBsuite install & test instructions are complete
-* Ensure .bashrc and jupyter 
-
-instructions are complete
+* Ensure .bashrc and jupyter instructions are complete
 
 
 
