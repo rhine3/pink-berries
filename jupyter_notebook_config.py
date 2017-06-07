@@ -1,4 +1,24 @@
-#Configuration file for jupyter-notebook.
+# Configuration file for Jupyter Notebook. Default options are commented out below
+# To generate a fresh config file with all default options (not recommended), run:
+#     jupyter notebook --generate-config
+
+
+## The IP address the notebook server will listen on.
+c.NotebookApp.ip = '*'
+
+## Hashed password to use for web authentication.
+c.NotebookApp.password = 'sha1:06ce83a4b754:9df093a0498353b2c0950ca7ff0eff0f5839e541'
+
+## The port the notebook server will listen on.
+c.NotebookApp.port = 8888
+
+## Whether to open in a browser after starting. The specific browser used is
+#  platform dependent and determined by the python standard library `webbrowser`
+#  module, unless it is overridden using the --browser (NotebookApp.browser)
+#  configuration option.
+c.NotebookApp.open_browser = False
+
+
 
 #------------------------------------------------------------------------------
 # Application(SingletonConfigurable) configuration
@@ -154,9 +174,6 @@
 #  limited.
 #c.NotebookApp.iopub_msg_rate_limit = 0
 
-## The IP address the notebook server will listen on.
-c.NotebookApp.ip = '*'
-
 ## Supply extra arguments that will be passed to Jinja environment.
 #c.NotebookApp.jinja_environment_options = {}
 
@@ -193,25 +210,6 @@ c.NotebookApp.ip = '*'
 
 ## The directory to use for notebooks and kernels.
 #c.NotebookApp.notebook_dir = ''
-
-## Whether to open in a browser after starting. The specific browser used is
-#  platform dependent and determined by the python standard library `webbrowser`
-#  module, unless it is overridden using the --browser (NotebookApp.browser)
-#  configuration option.
-#c.NotebookApp.open_browser = True
-
-## Hashed password to use for web authentication.
-#  
-#  To generate, type in a python/IPython shell:
-#  
-#    from notebook.auth import passwd; passwd()
-#  
-
-#  The string should be of the form type:salt:hashed-password.
-c.NotebookApp.password = 'sha1:06ce83a4b754:9df093a0498353b2c0950ca7ff0eff0f5839e541'
-
-## The port the notebook server will listen on.
-c.NotebookApp.port = 8888
 
 ## The number of additional ports to try if the specified port is not available.
 #c.NotebookApp.port_retries = 50
@@ -580,4 +578,3 @@ c.NotebookApp.port = 8888
 #  
 #  By default, all installed kernels are allowed.
 #c.KernelSpecManager.whitelist = set()
-
