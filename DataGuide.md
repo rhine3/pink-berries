@@ -33,6 +33,9 @@ but a corresponding Illumina run was run on the same sample.
   * `illumina_4moleculo/`:  
         same batch of DNA as for moleculo library; nextera library prep; 1 full HiSeq lane and 1 MiSeq run
         
+        *need to look at this folder more*
+        
+
 * DNA extracted from single aggregates:
 
   * `pacbio/`:  
