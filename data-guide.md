@@ -46,15 +46,11 @@ but a corresponding Illumina run was run on the same sample.
 
 # `single-berry-metagenomes/`
 
-DNA was extracted from individual berries and sequenced on the Illumina Miseq
+DNA extracted from individual berries and sequenced on the Illumina Miseq (accurate short-read).
 
-Samples are numbered Lizzy 1 - Lizzy 10, but only a handful were sequenced
+Samples are numbered Lizzy 1 - Lizzy 10, but only a handful were sequenced. 
 
-Samples were sequenced on two separate miseq runs.
-
-Some samples were sequenced twice to increase coverage
-
-combined-runs/ folder adds together reads for samples that were run twice.  Single run samples are found in either miseq1 or miseq2 folder
+Samples were sequenced on two separate miseq runs. Some samples (Lizzy 2 and Lizzy 5) were sequenced twice to increase coverage, found in the `combined-runs/` folder.  Single run samples are found in either `miseq1` folder (Lizzy 2, Lizzy 3, and Lizzy 5) or `miseq2` folder (Lizzy 2, Lizzy 5, Lizzy 9).
 
 * `combined-runs/` 
   Reads (not assembled?) from two berries: Lizzy 2 and Lizzy 5.
