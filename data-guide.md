@@ -20,7 +20,7 @@ Contains three assembly files and the raw reads used to create those assemblies.
 Located within `metagenomes/sequence-reads/`. 
 
 Broadly, there are two types of reads: 
-long reads (Moleculo or PacBio sequencing) and short reads (Illumina sequencing). 
+long reads (Moleculo, aka `Illumina TruSeq` or PacBio sequencing) and short reads (Illumina sequencing). 
 Moleculo and PacBio platforms were run on different samples, 
 but a corresponding Illumina run was run on the same sample.
 
