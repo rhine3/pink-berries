@@ -1,10 +1,13 @@
 # `assembled-genomes/`
-Assembled genomes. Two sub-folders: `illumina-genomes/` and `pacbio-genomes/`,
-i.e. genomes assembled from Illumina sequencing data and PacBio sequencing data.
+Assembled genomes--genomes assembled from Illumina sequencing data and PacBio sequencing data.
+
+* `illumina-genomes/` : alphaproteobacteria and bacteroidetes assembled genomes from illumina
+* `pacbio-genomes/` : purple sulfur bacteria, sulfur reducing bacteria, and alphaproteobacteria assembled from pacbio
+
 
 See below for more information about the different raw samples that went into Illumina and PacBio sequencing.
 
-## `metagenomes/`
+# `metagenomes/`
 Contains three assembly files and the raw reads used to create those assemblies.
 
 ### Assembly files:
@@ -28,7 +31,7 @@ but a corresponding Illumina run was run on the same sample.
 * DNA extracted from 10 aggregates:
 
   * `moleculo/`:  
-        2 libraries sequenced across 2 Hiseq lanes and a Miseq run
+        2 libraries sequenced across 2 Hiseq lanes and a Miseq run 
   
   * `illumina_4moleculo/`:  
         same batch of DNA as for moleculo library; nextera library prep; 1 full HiSeq lane and 1 MiSeq run
