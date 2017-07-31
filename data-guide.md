@@ -1,5 +1,5 @@
 # `assembled-genomes/`
-Assembled genomes--genomes assembled from Illumina sequencing data and PacBio sequencing data.
+Genomes assembled from Illumina sequencing data and PacBio sequencing data.
 
 * `illumina-genomes/` : alphaproteobacteria and bacteroidetes assembled genomes from illumina data
 * `pacbio-genomes/` : purple sulfur bacteria, sulfur reducing bacteria, and alphaproteobacteria assembled from pacbio data
