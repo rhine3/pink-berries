@@ -42,7 +42,7 @@ but a corresponding Illumina run was run on the same sample.
     DNA extracted from single aggregates; one library prepped from single aggregate (berry 9), another from a mixed pool; most sequence data came from "berry 9" a single aggregate library; 42 smrt cells total - mix of p4c2 and p5c3 chemistries; polishing done w p4c2 only
   
   * `illumina_4pacbio/`:  
-    nextera library from berry 9 single aggregate; barcoded portion of a miseq run
+    Nextera library from berry 9 single aggregate; barcoded portion of a miseq run. Duplicated in `single-berry-metagenomes/miseq2-renamed/`
 
 # `single-berry-metagenomes/`
 
