@@ -1,11 +1,12 @@
 # `assembled-genomes/`
 Assembled genomes--genomes assembled from Illumina sequencing data and PacBio sequencing data.
 
-* `illumina-genomes/` : alphaproteobacteria and bacteroidetes assembled genomes from illumina
-* `pacbio-genomes/` : purple sulfur bacteria, sulfur reducing bacteria, and alphaproteobacteria assembled from pacbio
+* `illumina-genomes/` : alphaproteobacteria and bacteroidetes assembled genomes from illumina data
+* `pacbio-genomes/` : purple sulfur bacteria, sulfur reducing bacteria, and alphaproteobacteria assembled from pacbio data
+    
+    * `alphaproteo_bins/*` : both illumina and pacbio bins 
 
-
-See below for more information about the different raw samples that went into Illumina and PacBio sequencing.
+See below for more information about the different raw samples that went into Illumina and PacBio assembling.
 
 # `metagenomes/`
 Contains three assembly files and the raw reads used to create those assemblies.
