@@ -37,9 +37,11 @@ but a corresponding Illumina run was run on the same sample.
         2 libraries sequenced across 2 Hiseq lanes and a Miseq run 
   
   * `illumina_4moleculo/`:  
-        same batch of DNA as for moleculo library; nextera library prep; 1 full HiSeq lane and 1 MiSeq run
+        same batch of DNA as for moleculo library; nextera library prep; 1 full HiSeq lane and 1 MiSeq run. Also contains a sub-folder, `quality-trimmed-reads/`, which contains a subfolder, `reads-by-genome/`
         
-        *need to look at this folder more*
+        * `quality-trimmed-reads/` : 
+        QC'd version of this dataset, as described in readme within the folder: `README-qc-reads.md`
+        
         
 
 * DNA extracted from single aggregates:
