@@ -1,4 +1,4 @@
-## `assembled-genomes/`
+# `assembled-genomes/`
 Assembled genomes. Two sub-folders: `illumina-genomes/` and `pacbio-genomes/`,
 i.e. genomes assembled from Illumina sequencing data and PacBio sequencing data.
 
