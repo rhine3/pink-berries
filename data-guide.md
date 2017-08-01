@@ -51,9 +51,9 @@ but a corresponding Illumina run was run on the same sample.
   
       * Files: 
       
-            * corrected.fasta
-            * corrected.fastq
-            * filtered_subreads.fastq
+            `filtered_subreads.fastq` - the pacbio data, broken into pieces based on adaptor location (instead of circularized)
+            `corrected.fastq` - the above file, but with all contigs stacked onto each other and error-corrected
+            `corrected.fasta` - the above file, but without quality information
       
   * `illumina_4pacbio/`:  
     Nextera library from berry 9 single aggregate; barcoded portion of a miseq run. Duplicated in `single-berry-metagenomes/miseq2-renamed/`
