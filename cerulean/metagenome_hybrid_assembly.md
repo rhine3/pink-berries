@@ -47,7 +47,32 @@ First, assemble the short-read contigs in `Lizzy9.fastq`. ABySS will display a l
 abyss-pe name=short-read k=64 in='Lizzy9.fastq' > abyss-output.txt
 ```
 
+ABySS's paired-end assembly produces a series of output files. The ones we are concerned are named `short-read-contigs.dot` and `short-read-contigs.fa`.
 
+# What are the extra output files?
 
+# BLASR: Map contigs to long reads
 
+Recall that our long reads are in `corrected.fastq`. We'll map the contigs in `short-read-contigs.fa`.
 
+First use `sawriter` to create a suffix array of `short-read-contigs.fa`: 
+
+```
+sawriter short-read-contigs.fa
+```
+
+The output is `short-read-contigs.fa.sa`. 
+
+Then use `blasr` to map contigs to the long reads. Blasr takes the following as inputs:
+
+* long reads: `corrected.fastq`
+* short read contigs: `short-read-contigs.fa`
+* the number of threads: `-nproc 31`
+* the output file location: `-out mapping.fasta.m4`
+* and variety of parameters used to make the mapping (values specified in the Cerulean documentation)
+```
+ blasr corrected.fastq short-read-contigs.fa -minMatch 10 \
+     -minPctIdentity 70 -bestn 30 -nCandidates 30 -maxScore -500 \
+     -nproc 31 -noSplitSubreads -header\
+     -out mapping.fasta.m4
+```
