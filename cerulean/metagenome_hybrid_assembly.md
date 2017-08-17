@@ -68,7 +68,8 @@ Then use `blasr` to map contigs to the long reads. Blasr takes the following as 
 * long reads: `corrected.fastq`
 * short read contigs: `short-read-contigs.fa`
 * the number of threads: `-nproc 31`
-* the output file location: `-out mapping.fasta.m4`
+* the output file location: `-out mapping.fasta.m4` 
+* the `-header` flag so that the file begins with a helpful header
 * and variety of parameters used to make the mapping (values specified in the Cerulean documentation)
 ```
  blasr corrected.fastq short-read-contigs.fa -minMatch 10 \
@@ -76,3 +77,33 @@ Then use `blasr` to map contigs to the long reads. Blasr takes the following as 
      -nproc 31 -noSplitSubreads -header\
      -out mapping.fasta.m4
 ```
+
+If Blasr runs successfully, the mapping will be in `mapping.fasta.m4`.
+
+# Cerulean: Create assembly from mapping
+
+
+## Clean-up
+First, we need to remove the `-header` flag from `mapping.fasta.m4`; otherwise Cerulean will not run. You can do this in your favorite text editor.
+
+We also need to make sure that the relevant files are in the same "base directory" and are all named with the same prefix. For instance I copied these files in the directory `~/hybrid/cerulean` and named them as follows:
+```
+mapping.fasta.m4    -> metagenome_contigs_mapping.fasta.m4     
+short-read-contigs.fa -> metagenome-contigs.fa
+short-read-contigs.dot  -> metagenome-contigs.dot
+```
+
+Cerulean is run with the following format:lx
+```
+python src/Cerulean.py --dataname <dataname> --basedir <basedir> \
+ --nproc <numthreads>
+```
+e.g.
+
+```
+python ~/Cerulean/src/Cerulean.py --dataname metagenome \
+ --basedir ~/hybrid/cerulean-output --nproc 31
+```
+
+This will generate two files, `<dataname>_cerulean.fasta` and `<dataname>_cerulean.dot`
+
