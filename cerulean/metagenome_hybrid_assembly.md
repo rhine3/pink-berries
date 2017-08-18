@@ -101,8 +101,7 @@ python src/Cerulean.py --dataname <dataname> --basedir <basedir> \
 e.g.
 
 ```
-python ~/Cerulean/src/Cerulean.py --dataname metagenome \
- --basedir ~/hybrid/cerulean-output --nproc 31
+python ~/Cerulean/src/Cerulean.py --dataname metagenome --basedir ~/hybrid/cerulean-output --nproc 31
 ```
 
 This will generate two files, `<dataname>_cerulean.fasta` and `<dataname>_cerulean.dot`
