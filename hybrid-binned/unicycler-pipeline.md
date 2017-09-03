@@ -37,7 +37,7 @@ The input files following `-1` and `-2` are read1 and read2 of the pair-ends. Th
 There used to be an option to manually control the filtering depth below which contigs are thrown out, but the option is no longer present. See `unicycler --help_all` for the list of options.
 
 **Results**
-* The assembly results for the pacbio + illumina_4pacbio reads can be found in the folder:
+* The assembly results for the pacbio + illumina_4pacbio reads of Lizzy9 can be found in the folder:
 `/home/qbiodata/pinkberries/unicycler_assembly`
 In this folder there is:
     * the files used: `Lizzy9-deinterleaved-1.fastq`, `Lizzy9-deinterleaved-2.fastq`, and `pacbio-corrected.fastq`
