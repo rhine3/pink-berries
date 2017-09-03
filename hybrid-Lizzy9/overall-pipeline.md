@@ -55,3 +55,15 @@ qsub spades-submit.sh
 
 Monitor:
 `watch --interval=0.5 qstat 2935893.braid.cnsi.ucsb.edu`
+
+Got mail:
+```
+
+PBS Job Id: 2935893.braid.cnsi.ucsb.edu
+Job Name:   spades-submit.sh
+Exec host:  node58/23+node58/22+node58/21+node58/20+node58/19+node58/18+node58/17+node58/16+node58/15+node58/14+node58/13+node58/12
+Aborted by PBS Server
+Job exceeded some resource limit (walltime, mem, etc.). Job was aborted
+See Administrator for help
+
+```
