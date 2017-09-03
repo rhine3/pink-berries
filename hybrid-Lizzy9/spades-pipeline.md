@@ -1,7 +1,7 @@
 # SPAdes pipeline
-### by Matthew Melissa
+#### by Matthew Melissa
 
-## Getting started: test assembly
+### Getting started: test assembly
 
 As a first step, you can test out spades on their toy data set. To do so, create the following script titled submit_spades_test.sh in your home directory:
 
@@ -28,7 +28,7 @@ spades.py --test
 ```
 and then run it by entering qsub submit_spades_test.sh into the command line. It should take a few minutes to run, you can check the myout file to make sure it runs correctly. The output contents will be located in a folder (in your home directory) called spades_test.
 
-# Attempt to assemble berry reads
+### Attempt to assemble berry reads
 
 Now let's try assembling some actual sequence data. To start, we can look at the Illumina reads from the Pacbio sample. I've titled the following script submit_spades_paired.sh:
 
