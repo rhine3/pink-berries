@@ -58,6 +58,7 @@ Monitor:
 
 Got mail:
 ```
+$ cat /var/spool/mail/rhine3
 
 PBS Job Id: 2935893.braid.cnsi.ucsb.edu
 Job Name:   spades-submit.sh
@@ -72,4 +73,5 @@ The output file:
 `=>> PBS: job killed: walltime 81 exceeded limit 60`
 
 Try 00:01:30: `2935894.braid.cnsi.ucsb.edu` - still killed
+
 Try 00:24:00: `2935895.braid.cnsi.ucsb.edu`
