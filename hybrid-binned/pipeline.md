@@ -45,8 +45,10 @@ done
 ```
 
 (Just do one first to make sure the deinterleaving works well with the rest of the pipeline)
-grep -A1 "_1$" "a1_oceanocaulis.interleaved.fasta" | grep -v "^--$" >  ~/binned-data/deinterleaved/$FILE-deinterleaved/a1_oceanocaulis-reads1.fasta; 
-grep -A1 "_2$" "a1_oceanocaulis.interleaved.fasta" | grep -v "^--$" >  ~/binned-data/deinterleaved/$FILE-deinterleaved/a1_oceanocaulis-reads2.fasta; 
+```
+$ grep -A1 "_1$" "a1_oceanocaulis.interleaved.fasta" | grep -v "^--$" >  ~/binned-data/deinterleaved/$FILE-deinterleaved/a1_oceanocaulis-reads1.fasta
+$ grep -A1 "_2$" "a1_oceanocaulis.interleaved.fasta" | grep -v "^--$" >  ~/binned-data/deinterleaved/$FILE-deinterleaved/a1_oceanocaulis-reads2.fasta
+```
 
 ## Bin moleculo long reads
 
