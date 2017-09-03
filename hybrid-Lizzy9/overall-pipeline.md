@@ -54,7 +54,7 @@ qsub spades-submit.sh
 ```
 
 Monitor:
-`watch --interval=0.5 qstat 2935893.braid.cnsi.ucsb.edu`
+`watch --interval=0.5 qstat 2935893`
 
 Got mail:
 ```
