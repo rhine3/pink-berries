@@ -80,6 +80,9 @@ To run quast on the finished assembly (without a reference genome), run the foll
 quast.py /home/qbio18/assembled_illumina_4pacbio_10G/contigs.fasta
 ```
 
+## Lizzy9 assembly attempt
+
+
 * Completed a hybrid assembly using:
     * Long reads: /home/rhine3/data/metagenomes/sequence_reads/pacbio/corrected.fastq
     * Short reads: /home/rhine3/data/metagenomes/sequence_reads/illumina_4pacbio/Lizzy9.fastq
