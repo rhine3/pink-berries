@@ -50,7 +50,7 @@ $ grep -A1 "_1$" "a1_oceanocaulis.interleaved.fasta" | grep -v "^--$" >  ~/binne
 $ grep -A1 "_2$" "a1_oceanocaulis.interleaved.fasta" | grep -v "^--$" >  ~/binned-data/deinterleaved/a1_oceanocaulis-reads2.fasta
 ```
 
-## SPAdes without binning long reads
+## SPAdes on binned short reads without binning long reads
 
 ```
 #PBS -l nodes=1:ppn=1
