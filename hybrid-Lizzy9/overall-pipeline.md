@@ -75,3 +75,7 @@ The output file:
 Try 00:01:30: `2935894.braid.cnsi.ucsb.edu` - still killed
 
 Try 00:24:00: `2935895.braid.cnsi.ucsb.edu`
+
+Duh, I was submitting in minutes instead of hours
+
+Try 6:00:00
