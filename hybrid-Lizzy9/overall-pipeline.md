@@ -67,3 +67,9 @@ Job exceeded some resource limit (walltime, mem, etc.). Job was aborted
 See Administrator for help
 
 ```
+
+The output file:
+`=>> PBS: job killed: walltime 81 exceeded limit 60`
+
+Try 81: `2935894.braid.cnsi.ucsb.edu`
+
