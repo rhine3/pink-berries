@@ -32,16 +32,7 @@ GCCCCACCTGGCACGCGTTGGGGGCGTAGCCGGCCTCCACCGCGTCCCGCGTGGTGGTCGCGGGACGTGGCCAGGTCTGG
 CTCACCCTGGGCCTGCCCCACAACCTCACAAAGGCTCGATGGGTCAGGGTGCTCCGTCTTGGTCTCGTCTGCCTGCGCCGGGGCGAAGGCAGACGAGACCAAGACGGGGCACCCTGACCCATCGAGCCTTTGTGGGGGTGTGGGGGAGGCCCAGGG
 ```
 
-Copy these to a new directory:
-
-```
-$ pwd
-
-$ mkdir ~/binned-data
-$ cp * ~/binned-data/
-```
-
-Deinterleave as a group:
+Copied to a new directory, `~/binned-data/`. To deinterleave as a group:
 
 ```
 $ cd ~/binned-data/
