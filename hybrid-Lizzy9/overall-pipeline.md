@@ -1,13 +1,29 @@
-Trying to replicate and improve on initial assemblies by Matt Melissa & Michael Pearce (see respective pipeline.md files)
+Trying to replicate and improve on initial assemblies by Matt Melissa (attempted assembly on SPAdes) & Michael Pearce (assembly on Unicycler)--see respective pipeline.md files.
 
 ## SPAdes assembly on Lizzy9 PacBio data
+Copying all data into `/home/rhine3/hybrid-assemblies/lizzy9-data/`
+
+After the next two steps the data will be in these filenames within the folder:
+```
+lizzy9-pacbio.fastq
+lizzy9-reads1.fastq
+lizzy9-reads2.fastq
+```
 
 #### Deinterleave paired-end file:
 `/home/rhine3/data/metagenomes/sequence_reads/illumina_4pacbio/Lizzy9.fastq`
 
-#### Use corrected pacbio data:
-`/home/rhine3/data/metagenomes/sequence_reads/pacbio/corrected.fastq`
+```
+grep -A3 "/1$" "/home/rhine3/data/metagenomes/sequence_reads/illumina_4pacbio/Lizzy9.fastq" | grep -v "^--$" > /home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-reads1.fastq
+grep -A3 "/2$" "/home/rhine3/data/metagenomes/sequence_reads/illumina_4pacbio/Lizzy9.fastq" | grep -v "^--$" > /home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-reads2.fastq
+```
 
+#### Use corrected pacbio data:
+`cp /home/rhine3/data/metagenomes/sequence_reads/pacbio/corrected.fastq 
+/home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-pacbio.fastq`
+
+
+#### Qsub file:
 ```
 #PBS -l nodes=1:ppn=12
 # specify the time you expect the job to run hh:mm:ss
@@ -23,5 +39,5 @@ source ~/.bashrc
 # move to current working directory
 cd $PBS_O_WORKDIR
 
-spades.py -1 /home/rhine3/data/metagenomes/sequence_reads/illumina_4moleculo/Pb2_MiseqNextera/Pb2_MiseqNextera_R1.fastq -2 /home/rhine3/data/metagenomes/sequence_reads/illumina_4moleculo/Pb2_MiseqNextera/Pb2_MiseqNextera_R2.fastq -o assembled_Pb2_MiseqNextera
+spades.py -1 /home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-reads1.fastq -2 /home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-reads2.fastq --pacbio /home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-pacbio.fastq -o assembled_Pb2_MiseqNextera
 ```
