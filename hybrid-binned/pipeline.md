@@ -1,6 +1,6 @@
 # Pipeline for binned reads
 
-# Short reads from Lizzy's initial binning strategy 
+## Short reads from Lizzy's initial binning strategy 
 Aside from the purple sulfur bacteria and sulfur-reducing bacteria, there are eight high-abundance OTUs that Lizzy binned:
 
 ```
@@ -17,7 +17,7 @@ b5_cyt2.interleaved.fasta
 ```
 # Need to look more into how these were binned
 
-## Deinterleave reads
+### Deinterleave reads
 These are paired-end reads. Check out the format:
 ```
 $ head -8 a1_oceanocaulis.interleaved.fasta
@@ -57,7 +57,7 @@ done
 grep -A1 "_1$" "a1_oceanocaulis.interleaved.fasta" | grep -v "^--$" >  ~/binned-data/deinterleaved/$FILE-deinterleaved/a1_oceanocaulis-reads1.fasta; 
 grep -A1 "_2$" "a1_oceanocaulis.interleaved.fasta" | grep -v "^--$" >  ~/binned-data/deinterleaved/$FILE-deinterleaved/a1_oceanocaulis-reads2.fasta; 
 
-# Bin moleculo long reads
+## Bin moleculo long reads
 
 ## MetaSPAdes
 
