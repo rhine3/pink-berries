@@ -30,7 +30,7 @@ Direct output to `/home/rhine3/hybrid-assemblies/spades`
 ```
 #PBS -l nodes=1:ppn=12
 # specify the time you expect the job to run hh:mm:ss
-#PBS -l walltime=24:00:00
+#PBS -l walltime=06:00:00
 #PBS -l mem=64G
 # output and error files
 #PBS -o myout.o$PBS_JOBID
@@ -74,8 +74,8 @@ The output file:
 
 Try 00:01:30: `2935894.braid.cnsi.ucsb.edu` - still killed
 
-Try 00:24:00: `2935895.braid.cnsi.ucsb.edu`
+Try 00:24:00: `2935895.braid.cnsi.ucsb.edu` - killed
 
 Duh, I was submitting in minutes instead of hours
 
-Try 6:00:00
+Try 06:00:00: `2935896`
