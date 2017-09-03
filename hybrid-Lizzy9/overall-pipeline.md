@@ -24,6 +24,9 @@ grep -A3 "/2$" "/home/rhine3/data/metagenomes/sequence_reads/illumina_4pacbio/Li
 
 
 #### Qsub file:
+
+Direct output to `/home/rhine3/hybrid-assemblies/spades`
+
 ```
 #PBS -l nodes=1:ppn=12
 # specify the time you expect the job to run hh:mm:ss
@@ -39,5 +42,16 @@ source ~/.bashrc
 # move to current working directory
 cd $PBS_O_WORKDIR
 
-spades.py -1 /home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-reads1.fastq -2 /home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-reads2.fastq --pacbio /home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-pacbio.fastq -o assembled_Pb2_MiseqNextera
+spades.py -1 /home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-reads1.fastq -2 /home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-reads2.fastq --pacbio /home/rhine3/hybrid-assemblies/lizzy9-data/lizzy9-pacbio.fastq -o /home/rhine3/hybrid-assemblies/spades
+
 ```
+
+Save and run this from within a subdirectory, `spades/qsub`, so that the submit, output, and error files are collected in the same place:
+
+```
+cd ~/hybrid-assemblies/spades/qsub
+qsub spades-submit.sh
+```
+
+Monitor:
+`watch --interval=0.5 qstat 2935893.braid.cnsi.ucsb.edu`
