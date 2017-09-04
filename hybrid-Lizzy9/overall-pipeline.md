@@ -64,4 +64,13 @@ The single error is stored in `qsub/myout.e2935896.braid.cnsi.ucsb.edu`; the ver
 
 Contigs/scaffolds within each file are named with the format `>NODE_x_length_y_cov_z`, where `x` is the number of the contig, `y` is the length of the sequence in nucleotides, and `z` is the k-mer coverage (the number of contigs that map to that contig) for the largest k value.
 
-Subdirectories include `K21`, `K33`, `K55`, `K77`, `K99`, and `K127`. These are the results of assemblies conducted on different k-mer sizes. Will have to examine each of these to determine the complexity of the connections (# of nodes and edges) and the number of dead ends. Can use Velvet for this.
+Subdirectories include `K21`, `K33`, `K55`, `K77`, `K99`, and `K127`. These are the results of assemblies conducted on different k-mer sizes. The final SPAdes assembly should reflect a range of k-mer sizes.
+
+#### Up next
+Use QUAST to evaluate the assemblies
+
+* Is QUAST still installed on the cluster??
+
+Use Velvet to look at assemblies
+
+Use the SPAdes `--trusted-contigs` or `--untrusted-contigs` options to feed in previous assemblies?
