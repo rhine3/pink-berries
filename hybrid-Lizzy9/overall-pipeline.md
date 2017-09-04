@@ -54,28 +54,14 @@ qsub spades-submit.sh
 ```
 
 Monitor:
-`watch --interval=0.5 qstat 2935893`
+`watch --interval=0.5 qstat 2935896`
 
-Got mail:
-```
-$ cat /var/spool/mail/rhine3
 
-PBS Job Id: 2935893.braid.cnsi.ucsb.edu
-Job Name:   spades-submit.sh
-Exec host:  node58/23+node58/22+node58/21+node58/20+node58/19+node58/18+node58/17+node58/16+node58/15+node58/14+node58/13+node58/12
-Aborted by PBS Server
-Job exceeded some resource limit (walltime, mem, etc.). Job was aborted
-See Administrator for help
+#### Output
+SPAdes produced output in `/home/rhine3/hybrid-assemblies/spades`. 
 
-```
+The single error is stored in `qsub/myout.e2935896.braid.cnsi.ucsb.edu`; the very long output is stored in `qsub/myout.e2935896.braid.cnsi.ucsb.edu`
 
-The output file:
-`=>> PBS: job killed: walltime 81 exceeded limit 60`
+Contigs/scaffolds within each file are named with the format `>NODE_x_length_y_cov_z`, where `x` is the number of the contig, `y` is the length of the sequence in nucleotides, and `z` is the k-mer coverage (the number of contigs that map to that contig) for the largest k value.
 
-Try 00:01:30: `2935894.braid.cnsi.ucsb.edu` - still killed
-
-Try 00:24:00: `2935895.braid.cnsi.ucsb.edu` - killed
-
-Duh, I was submitting in minutes instead of hours
-
-Try 06:00:00: `2935896`
+Subdirectories include `K21`, `K33`, `K55`, `K77`, `K99`, and `K127`. These are the results of assemblies conducted on different k-mer sizes. Will have to examine each of these to determine the complexity of the connections (# of nodes and edges) and the number of dead ends. Can use Velvet for this.
